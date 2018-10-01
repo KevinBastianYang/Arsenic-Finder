@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!-- http://zlab.bu.edu/~phaverty/SupplementalData/CisML/cisml.dtd -->
+<!DOCTYPE cis-element-search[
+<!ELEMENT cis-element-search (program-name, parameters, (pattern | multi-pattern-scan)*)>
+<!ELEMENT program-name (#PCDATA)>
+<!ELEMENT parameters (
+  pattern-file, 
+  sequence-file, 
+  background-seq-file?,
+  pattern-pvalue-cutoff?,
+  sequence-pvalue-cutoff?,
+  site-pvalue-cutoff?,
+  sequence-filtering,
+  ANY*
+ )>
+<!ELEMENT command-line (#PCDATA)>
+<!ELEMENT pattern-file (#PCDATA)>
+<!ELEMENT sequence-file (#PCDATA)>
+<!ELEMENT background-seq-file (#PCDATA)>
+<!ELEMENT pattern-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-pvalue-cutoff (#PCDATA)>
+<!ELEMENT site-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-filtering EMPTY>
+<!ELEMENT multi-pattern-scan (pattern+, ANY*)>
+<!ELEMENT pattern (scanned-sequence+, ANY*)>
+<!ELEMENT scanned-sequence (matched-element*, ANY*)>
+<!ELEMENT matched-element (sequence)>
+<!ELEMENT sequence (#PCDATA)>
+<!ATTLIST cis-element-search
+xmlns:xsi CDATA #IMPLIED
+xmlns:mem CDATA #IMPLIED
+xsi:schemaLocation CDATA #IMPLIED
+>
+<!ATTLIST sequence-filtering
+on-off CDATA #REQUIRED
+type CDATA #IMPLIED
+>
+<!ATTLIST multi-pattern-scan
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+>
+<!ATTLIST pattern
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+pvalue CDATA #IMPLIED
+score CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST scanned-sequence
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+length CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST matched-element
+start CDATA #REQUIRED
+stop CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+clusterid CDATA #IMPLIED
+>
+
+]>
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<command-line>/home/yangjunchen/Desktop/web2/server/app/fimo --oc /home/yangjunchen/Desktop/web2/server/app/match_out --verbosity 1 --thresh 0.05 /home/yangjunchen/Desktop/web2/server/app/Arsenical_motif.txt /home/yangjunchen/Desktop/web2/server/app/readin.txt</command-line>
+<pattern-file>/home/yangjunchen/Desktop/web2/server/app/Arsenical_motif.txt</pattern-file>
+<sequence-file>/home/yangjunchen/Desktop/web2/server/app/readin.txt</sequence-file>
+<site-pvalue-cutoff>0.05</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="1" name="">
+<scanned-sequence accession="1NLX:A|PDBID|CHAIN|SEQUENCE" name="1NLX:A|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:B|PDBID|CHAIN|SEQUENCE" name="1NLX:B|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:C|PDBID|CHAIN|SEQUENCE" name="1NLX:C|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:D|PDBID|CHAIN|SEQUENCE" name="1NLX:D|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:E|PDBID|CHAIN|SEQUENCE" name="1NLX:E|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:F|PDBID|CHAIN|SEQUENCE" name="1NLX:F|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:G|PDBID|CHAIN|SEQUENCE" name="1NLX:G|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:H|PDBID|CHAIN|SEQUENCE" name="1NLX:H|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:I|PDBID|CHAIN|SEQUENCE" name="1NLX:I|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:J|PDBID|CHAIN|SEQUENCE" name="1NLX:J|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:K|PDBID|CHAIN|SEQUENCE" name="1NLX:K|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:L|PDBID|CHAIN|SEQUENCE" name="1NLX:L|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:M|PDBID|CHAIN|SEQUENCE" name="1NLX:M|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="1NLX:N|PDBID|CHAIN|SEQUENCE" name="1NLX:N|PDBID|CHAIN|SEQUENCE">
+<matched-element start="47" stop="56" score="-2.23529" pvalue="0.0206">
+<sequence>KRNLADAVSK</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="94" stop="103" score="-3.80882" pvalue="0.0345">
+<sequence>ALRIIAGTPE</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="5" stop="14" score="-4.33824" pvalue="0.0397">
+<sequence>TTEEQKLIED</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="16" stop="25" score="-4.97059" pvalue="0.0461">
+<sequence>NASFRAAMAT</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+<matched-element start="9" stop="18" score="-5.32353" pvalue="0.0496">
+<sequence>QKLIEDVNAS</sequence>
+<mem:qvalue>0.933</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+</cis-element-search>
