@@ -1,4 +1,4 @@
-<img src="https://github.com/KevinBastianYang/arsenic_webserver/blob/master/web2/server/static/af.png" alt="af">
+<img src="https://github.com/KevinBastianYang/arsenic_webserver/blob/master/web2/server/static/af.png" height = "200" alt="af">
 
 ### Getting started
 The web site is [here](http://47.254.78.183:8000/server/). You can input the query sequence and the p-value, and the server will search whether the sequence contains the possible binding site and report the results.
