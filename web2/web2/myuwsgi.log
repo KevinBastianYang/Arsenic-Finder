@@ -1,0 +1,46 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Oct  3 08:24:34 2018] ***
+compiled with version: 5.4.0 20160609 on 02 October 2018 11:14:48
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: jcserver
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yangjc/vir_server/web2/web2
+writing pidfile to myuwsgi.pid
+detected binary path: /home/yangjc/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yangjc/vir_server/web2/
+your processes number limit is 7856
+limiting address space of processes...
+your process address space limit is 536870912 bytes (512 MB)
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+VirtualHosting mode enabled.
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 172.20.200.13:8080 fd 3
+probably another instance of uWSGI is running on the same address (172.20.200.13:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Oct  3 08:28:05 2018] ***
+compiled with version: 5.4.0 20160609 on 02 October 2018 11:14:48
+os: Linux-4.4.0-117-generic #141-Ubuntu SMP Tue Mar 13 11:58:07 UTC 2018
+nodename: jcserver
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/yangjc/vir_server/web2/web2
+writing pidfile to myuwsgi.pid
+detected binary path: /home/yangjc/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/yangjc/vir_server/web2/
+your processes number limit is 7856
+limiting address space of processes...
+your process address space limit is 536870912 bytes (512 MB)
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+VirtualHosting mode enabled.
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8080 fd 3
+probably another instance of uWSGI is running on the same address (:8080).
+bind(): Address already in use [core/socket.c line 769]

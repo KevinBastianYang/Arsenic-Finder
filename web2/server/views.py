@@ -17,16 +17,16 @@ def seq_motif_scan(request):
         if form.is_valid():
             data = form.cleaned_data['seq']
             p_value = form.cleaned_data['p_value']
-            file_w = open("/home/yangjunchen/Desktop/web2/server/app/readin.txt",'w')
+            file_w = open("/home/yangjc/vir_server2/web2/server/app/readin.txt",'w')
             #file_w.write(data)
             for item in data:
                 file_w.write(item)
             file_w.close()
-            pre_command = "/home/yangjunchen/Desktop/web2/server/app/fimo --oc /home/yangjunchen/Desktop/web2/server/app/match_out --verbosity 1 --thresh "
-            sub_command = " /home/yangjunchen/Desktop/web2/server/app/Arsenical_motif.txt /home/yangjunchen/Desktop/web2/server/app/readin.txt"
+            pre_command = "/home/yangjc/vir_server2/web2/server/app/fimo --oc /home/yangjc/vir_server2/web2/server/app/match_out --verbosity 1 --thresh "
+            sub_command = " /home/yangjc/vir_server2/web2/server/app/Arsenical_motif.txt /home/yangjc/vir_server2/web2/server/app/readin.txt"
             command = pre_command + p_value + sub_command
             os.system(command)
-            file_r = open("/home/yangjunchen/Desktop/web2/server/app/match_out/fimo.txt",'r')
+            file_r = open("/home/yangjc/vir_server2/web2/server/app/match_out/fimo.txt",'r')
             record = []
             for line in file_r.readlines():
                 if line[0] == '#':
