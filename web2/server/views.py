@@ -15,7 +15,7 @@ def seq_motif_scan(request):
     if request.method == 'POST':
         form = MyForm(request.POST)
         if form.is_valid():
-            data = form.cleaned_data['seq']
+            data = form.cleaned_data['sequence']
             p_value = form.cleaned_data['p_value']
             file_w = open("/home/yangjc/vir_server2/web2/server/app/readin.txt",'w')
             #file_w.write(data)
@@ -24,7 +24,7 @@ def seq_motif_scan(request):
             file_w.close()
             pre_command = "/home/yangjc/vir_server2/web2/server/app/fimo --oc /home/yangjc/vir_server2/web2/server/app/match_out --verbosity 1 --thresh "
             sub_command = " /home/yangjc/vir_server2/web2/server/app/Arsenical_motif.txt /home/yangjc/vir_server2/web2/server/app/readin.txt"
-            command = pre_command + p_value + sub_command
+            command = pre_command + str(p_value) + sub_command
             os.system(command)
             file_r = open("/home/yangjc/vir_server2/web2/server/app/match_out/fimo.txt",'r')
             record = []
@@ -33,7 +33,10 @@ def seq_motif_scan(request):
                     continue
                 else :
                     temp = line.split('\t')
-                    record.append(temp[5]+'\t'+temp[6]+'\t'+temp[7]+'\t'+temp[8]+'\t'+temp[9]+'\n')
+                    tmplist = []
+                    for k in range(5,10):
+                        tmplist.append(temp[k])
+                    record.append(tmplist)
             file_r.close()
             submit = True
             return render(request,'index.html',{'record':record,'submit':submit})

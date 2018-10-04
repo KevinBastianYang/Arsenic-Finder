@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'dm08x2kv46cnf#&md7hpq7dv*=vdp+cp3e4@lf%us((5bqp_n*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','47.254.78.183']
 
@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 ####new add
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')

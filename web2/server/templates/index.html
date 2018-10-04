@@ -1,30 +1,208 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
+<title>Arsenic Finder </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function() {
+        $("table tr:nth-child(odd)").addClass("odd-row");
+		$("table td:first-child, table th:first-child").addClass("first");
+		$("table td:last-child, table th:last-child").addClass("last");
+});
+</script>
+
+<style type="text/css">	
+a {color:#666;}
+
+#content {width:65%; max-width:690px; margin:6% auto 0;}
+
+table {
+	overflow:hidden;
+	border:1px solid #d3d3d3;
+	background:#fefefe;
+	width:70%;
+	margin:5% auto 0;
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px; 
+	border-radius:5px;
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+th, td {padding:18px 28px 18px; text-align:center; }
+
+th {padding-top:22px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
+
+td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+
+tr.odd-row td {background:#f6f6f6;}
+
+td.first, th.first {text-align:left}
+
+td.last {border-right:none;}
+
+td {
+	background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f9f9f9), to(#fefefe));
+}
+
+tr.odd-row td {
+	background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f1f1f1), to(#f6f6f6));
+}
+
+th {
+	background: -moz-linear-gradient(100% 20% 90deg, #e8eaeb, #ededed);
+	background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#e8eaeb));
+}
+
+
+
+tr:first-child th.first {
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px; 
+}
+
+tr:first-child th.last {
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px; 
+}
+
+tr:last-child td.first {
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px;
+}
+
+tr:last-child td.last {
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px; 
+}
+</style>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.column {
+    width: 100%;
+    padding: 15px;  
+}
+.row0 {
+text-align: center;
+margin:auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.img-box img{
+        height:20%;
+        width:50%;
+	
+}
+
+.myform{
+height:200%}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+}
+
+</style>
 </head>
 <body>
-{% block content %}
+
+<div class = "header">
+  <div class="img-box">
+    <img src="{% static "af.png" %}"  alt="Logo">
+  </div>
+</div>
+
+<div class = "row">
+  <div class ="column">
+    <p>Arsenic Finder is an prediction tool used for searching potential arsenic binding site given a certain sequence. Current supported usage: Input fasta-format sequences or one plain text amino acid sequence and give a p-value, and Arsenic Finder will search the motif and return the results.
+   </div>
+</div>
+
 
 {% if submit%}
-<h1> Motif result</h1>
-<p>strand    score    p-value    q-value    matched-sequence</p>
-{% for item in record %}
-<div>
-{{item}}
+<div class = "row0">
+  <div class = "column">
+    <h1> Searching Results</h1>
+    <div id = "content">
+    <table align = "center" cellspacing="0">
+      <tr><th>strand</th> <th>score</th><th>p-value</th><th>q-value</th><th>matched-sequence</th><tr>
+    {% for list in record %}
+    <tr>
+    {% for item in list %}
+    <td>{{item}}</td>
+    {% endfor %}
+    </tr>    
+    {% endfor %}
+    </table>
+    </div>
+  </div>
 </div>
-{% endfor %}
 
 {% else %}
-<h1>Please input sequence below</h1>
-<form action = ".", method ="post",name = "myform">
-{{form.as_p}}
-{% csrf_token %}
-<input type = 'submit' height = 50 value = 'submit'>
-<!--textarea cols = "50" rows = "10" form="myform"></textarea>
-    <button form-type="submit"> 提交 </button-->
-</form>
+<div class = "row0">
+  <div class = "column">
+    
+    <form class= "myform" action = "." method ="post" name = "myform">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type = 'submit' height = 50 value = 'submit'>
+    </form>
+  </div>
+</div>
 {% endif %}
-{% endblock %}
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+
 </body>
 </html>
