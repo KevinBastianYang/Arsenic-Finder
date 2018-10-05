@@ -13,8 +13,9 @@ MGKATTEEQKLIEDVNASFRAAMATTANVPPADKYKTFEAAFTVSSKRNLADAVSKAPQLVPKLDEVYNAAYNAADHAAP
 EDKYEAFVLHFSEALRIIAGTPEVHAVKPGA
 ```
 An example output:
+
 | Strand  | Score | P-value  | Q-value |Matched-Sequence|
-| ------------- | ------------- | ------------- | ------------- | ------------- |
+| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
 | + |	-2.23529 |	0.0206 |	0.933	| KRNLADAVSK |
 | +	| -3.80882 |  0.0345 |  0.933	| ALRIIAGTPE |
 | +	| -4.33824 |  0.0397 |  0.933	| TTEEQKLIED |
