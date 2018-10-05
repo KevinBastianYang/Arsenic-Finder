@@ -17,5 +17,13 @@ EDKYEAFVLHFSEALRIIAGTPEVHAVKPGA
 * [Nginx](https://www.nginx.com/), a revserse proxy
 * [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/), used as the interface server
 
+### Find more
+Our methodology will soon be published.
 
+### License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+### Acknowledgement
+* The motif searching step is built with the help of [FIMO](https://academic.oup.com/bioinformatics/article/27/7/1017/232614) (*Charles E. Grant, Timothy L. Bailey, and William Stafford Noble, "FIMO: Scanning for occurrences of a given motif", Bioinformatics, 27(7):1017-1018, 2011.*)
+* Great thanks to Dr.Jingfang Wang and Shichao Pang who supported and inspired me a lot along the way.
 
