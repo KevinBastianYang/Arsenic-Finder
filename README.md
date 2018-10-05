@@ -12,8 +12,10 @@ MGKATTEEQKLIEDVNASFRAAMATTANVPPADKYKTFEAAFTVSSKRNLADAVSKAPQLVPKLDEVYNAAYNAADHAAP
 EDKYEAFVLHFSEALRIIAGTPEVHAVKPGA
 ```
 
-### Web server structure
-This server is built based on django, a python-written web framework, and deployed by Nginx (revserse proxy) and uWSGI(interface server).
+### Built with
+* [django](https://www.djangoproject.com/), a python-written web framework
+* [Nginx](https://www.nginx.com/), a revserse proxy
+* [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/), used as the interface server
 
 
 
